@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ativos</string>
+    <string name="label_name">name</string>
+    <string name="label_symbol">symbol</string>
+    <string name="label_my_stocks">My Stocks</string>
+    <string name="label_value_now">value now</string>
 </resources>

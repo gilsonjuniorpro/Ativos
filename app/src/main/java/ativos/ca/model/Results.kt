@@ -1,12 +1,17 @@
 package ativos.ca.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Results(
-    val change_percent: Double?,
+    @SerializedName("change_percent")
+    val changePercent: Double?,
     val currency: String?,
-    val market_cap: Double?,
+    @SerializedName("market_cap")
+    val marketCap: Double?,
     val name: String?,
     val price: Double?,
     val region: String?,
     val symbol: String?,
-    val updated_at: String?
+    @SerializedName("updated_at")
+    val updatedAt: String?
 )
