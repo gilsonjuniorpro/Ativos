@@ -1,5 +1,6 @@
 package ativos.ca.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -7,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import ativos.ca.DetailActivity
 import ativos.ca.R
 import ativos.ca.adapter.QuotationAdapter
 import ativos.ca.controller.QuotationController
@@ -67,7 +69,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 is StockViewModel.State.Loaded -> {
-                    val adapter: QuotationAdapter? = QuotationAdapter(state.items, this::openDetail)
+                    val adapter: QuotationAdapter? = QuotationAdapter(state.result, this::openDetail)
                     binding.recycler.adapter = adapter
                     binding.recycler.smoothScrollToPosition(0)
                 }
@@ -80,6 +82,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openDetail(results: Results?) {
-
+        val intent = Intent(this, DetailActivity::class.java)
+        startActivity(intent)
     }
 }

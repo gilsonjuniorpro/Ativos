@@ -35,8 +35,7 @@ class QuotationAdapter(
         holder.tvProfitValue.text = "10%"
         holder.tvValueFinalValue.text = "100,00"
 
-
-        //holder.itemView.setOnClickListener{ onItemClick(items[position]) }
+        holder.itemView.setOnClickListener{ onItemClick(items?.get(position)!!) }
     }
 
     override fun getItemCount(): Int = items!!.size

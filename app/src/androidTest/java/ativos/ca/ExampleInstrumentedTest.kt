@@ -37,7 +37,7 @@ class ExampleInstrumentedTest {
                 "5%"
             )
 
-            val rowId = dao.insert(stockTest)
+            val rowId = dao.update(stockTest)
             //assertTrue(rowId > -1)
 
             val stocks = dao.getAllStocks().first()
