@@ -1,7 +1,10 @@
 package ativos.ca.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Results(
     @SerializedName("change_percent")
     val changePercent: Double?,
@@ -14,4 +17,6 @@ data class Results(
     val symbol: String?,
     @SerializedName("updated_at")
     val updatedAt: String?
-)
+): Parcelable{
+
+}

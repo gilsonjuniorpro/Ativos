@@ -7,30 +7,24 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import ativos.ca.DetailActivity
 import ativos.ca.R
 import ativos.ca.adapter.QuotationAdapter
-import ativos.ca.controller.QuotationController
 import ativos.ca.databinding.ActivityMainBinding
 import ativos.ca.model.Results
 import ativos.ca.model.Stock
 import ativos.ca.repository.StockRepository
 import ativos.ca.viewmodel.StockViewModel
 import ativos.ca.viewmodel.StockViewModelFactory
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
     private var items: MutableList<Results> = ArrayList()
     private var layoutManager: LinearLayoutManager? = null
     private lateinit var binding: ActivityMainBinding
+
+    private val REQUEST_CODE_ADD_STOCK = 1
+    private val REQUEST_CODE_UPDATE_STOCK = 2
 
     private val viewModel: StockViewModel by lazy {
         ViewModelProvider(
@@ -83,6 +77,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun openDetail(results: Results?) {
         val intent = Intent(this, DetailActivity::class.java)
-        startActivity(intent)
+        intent.putExtra("isViewOrUpdate", true)
+        intent.putExtra("results", results)
+        //intent.putExtra("stock", stock)
+        startActivityForResult(
+            intent,
+            REQUEST_CODE_UPDATE_STOCK
+        )
     }
 }

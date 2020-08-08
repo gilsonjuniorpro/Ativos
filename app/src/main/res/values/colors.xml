@@ -7,4 +7,27 @@
     <color name="colorOrange">#FF9800</color>
 
 
+    <color name="colorBackgroundPrimary">#292929</color>
+    <color name="colorBackgroundPrimaryDark">#292929</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorSearchIcon">#dbdbdb</color>
+    <color name="colorTextHint">#7b7b7b</color>
+    <color name="colorQuickActionsBackground">#2f2d2e</color>
+    <color name="colorIcons">#a4a4a4</color>
+    <color name="colorTextSubtitle">#cecece</color>
+    <color name="colorDefaultNoteColor">#333333</color>
+    <color name="colorNoteSubtitleText">#fafafa</color>
+    <color name="colorMiscellaneousBackground">#1f1f1f</color>
+    <color name="colorNoteColor2">#fdbe3b</color>
+    <color name="colorNoteColor3">#ff4842</color>
+    <color name="colorNoteColor4">#3a52fc</color>
+    <color name="colorNoteColor5">#000000</color>
+    <color name="colorDelete">#ff4842</color>
+    <color name="colorSearchBackground">#333333</color>
+    <color name="colorLoadingBg">#FFFDE7</color>
+
+    <color name="colorBackgroundOnDevDarker">#1d5f6d</color>
+    <color name="colorBackgroundOnDevLighter">#c3eceb</color>
+    <color name="colorTextOnDevDarker">#444444</color>
+    <color name="colorTextOnDevLighter">#FFFFFF</color>
 </resources>

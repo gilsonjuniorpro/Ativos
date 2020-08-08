@@ -4,4 +4,47 @@
     <string name="label_symbol">symbol</string>
     <string name="label_my_stocks">My Stocks</string>
     <string name="label_value_now">value now</string>
+
+
+    <string name="stock_symbol_title">Stock Symbol</string>
+    <string name="stock_name_title">Stock Name</string>
+    <string name="stock_paid_value">Stock Paid Value</string>
+    <string name="stock_expected_profit">Stock Expected Profit</string>
+    <string name="stock_broking_value">Stock Broking Value</string>
+
+    <string name="title_minhas_notas">Minhas Notas</string>
+    <string name="procurar_anotacoes">Procurar anotações</string>
+    <string name="note_title">Título Anotação</string>
+    <string name="note_subtitle">Subtítulo  Anotação</string>
+    <string name="type_note_here">Digite sua Anotação aqui</string>
+    <string name="message_note_title_empty">Digite o Título da Anotação</string>
+    <string name="message_note_subtitle_empty">Digite o Subtítulo  da Anotação</string>
+    <string name="message_note_empty">Digite a Anotação</string>
+    <string name="message_success">Anotação Salva</string>
+    <string name="message_update_success">Anotação Atualizada</string>
+    <string name="message_delete_success">Anotação Deletada</string>
+    <string name="message_permission_denied">Permissão negada</string>
+    <string name="message_error_loading_image">Erro ao carregar Imagem</string>
+    <string name="loading">carregando...</string>
+    <string name="error_loading">Erro ao carregar</string>
+    <string name="color_note">Cor da Anotação</string>
+    <string name="choose_a_color">Escolha \numa cor</string>
+    <string name="delete_note">Deletar Anotação</string>
+    <string name="add_link">Adicionar Link</string>
+    <string name="add_image">Adicionar Imagem</string>
+    <string name="add_url">Adicionar URL</string>
+    <string name="field_add_url">adicione a URL aqui</string>
+    <string name="add">Adicionar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Deletar</string>
+    <string name="message_empty_url">Adicione uma url</string>
+    <string name="message_invalid_url">Adicione uma url válida</string>
+    <string name="message_delete_note">Você tem certeza que deseja deletar a Anotação</string>
+    <string name="other_apps">Outros Aplicativos</string>
+    <string name="url_ondev" translatable="false">http://ondev.ca\ncontact@ondev.ca</string>
+    <string name="contact_ondev" translatable="false">contact@ondev.ca</string>
+    <string name="psalms">Salmos</string>
+    <string name="evaluation">Média 4.7 estrelas</string>
+    <string name="balloons">Estourando Balões</string>
+    <string name="evaluation_balloons">Média 3.9 estrelas</string>
 </resources>
