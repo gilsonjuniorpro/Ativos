@@ -20,9 +20,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
             android:textColor="@color/colorBlue"
             android:textSize="21sp"
-            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSymbol"
@@ -36,9 +36,9 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
             android:textColor="@color/colorOrange"
             android:textSize="30sp"
-            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -65,6 +65,8 @@
             android:fontFamily="@font/roboto_bold"
             android:text="paid"
             android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvBroking"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvValueNow" />
 
@@ -72,11 +74,13 @@
             android:id="@+id/tvBroking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="45dp"
             android:fontFamily="@font/roboto_bold"
             android:text="broking"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tvPaidValue"
+            app:layout_constraintEnd_toStartOf="@+id/tvProfit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvPaid"
             app:layout_constraintTop_toTopOf="@+id/tvPaid" />
 
         <TextView
@@ -84,25 +88,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto_bold"
             android:text="expected profit"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBroking"
             app:layout_constraintEnd_toStartOf="@+id/tvValueFinal"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/tvBrokingValue"
-            app:layout_constraintTop_toTopOf="@+id/tvBroking" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvBroking" />
 
         <TextView
             android:id="@+id/tvValueFinal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto_bold"
             android:text="final value"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProfit"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvProfit" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvProfit" />
 
         <TextView
             android:id="@+id/tvPaidValue"
@@ -111,42 +117,42 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/roboto_medium"
-            tools:text="R$ 100.00"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvPaid"
             app:layout_constraintTop_toBottomOf="@+id/tvPaid"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="R$ 100.00" />
 
         <TextView
             android:id="@+id/tvBrokingValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
-            tools:text="R$ 10.00"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tvBroking"
-            app:layout_constraintTop_toTopOf="@+id/tvPaidValue" />
+            app:layout_constraintTop_toTopOf="@+id/tvPaidValue"
+            tools:text="R$ 10.00" />
 
         <TextView
             android:id="@+id/tvProfitValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
-            tools:text="10%"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tvProfit"
-            app:layout_constraintTop_toTopOf="@+id/tvBrokingValue" />
+            app:layout_constraintTop_toTopOf="@+id/tvBrokingValue"
+            tools:text="10%" />
 
         <TextView
             android:id="@+id/tvValueFinalValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
-            tools:text="R$ 200.00"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/tvValueFinal"
-            app:layout_constraintTop_toTopOf="@+id/tvProfitValue" />
+            app:layout_constraintTop_toTopOf="@+id/tvProfitValue"
+            tools:text="R$ 200.00" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

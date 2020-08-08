@@ -40,8 +40,9 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //.setAction("Action", null).show()
+            openCreateStock()
         }
 
         layoutManager = LinearLayoutManager(this)
@@ -51,6 +52,13 @@ class MainActivity : AppCompatActivity() {
         viewModel.allStocks.observe(this, Observer { stocks ->
             setItemsToObserver(stocks)
         })
+    }
+
+    private fun openCreateStock() {
+        startActivityForResult(
+            Intent(applicationContext, DetailActivity::class.java),
+            REQUEST_CODE_ADD_STOCK
+        )
     }
 
     private fun setItemsToObserver(items: List<Stock>){

@@ -16,7 +16,10 @@ data class Results(
     val region: String?,
     val symbol: String?,
     @SerializedName("updated_at")
-    val updatedAt: String?
+    val updatedAt: String?,
+    var paid: String?,
+    var broking: String?,
+    var profit: String?
 ): Parcelable{
 
 }

@@ -12,14 +12,20 @@
     <string name="stock_expected_profit">Stock Expected Profit</string>
     <string name="stock_broking_value">Stock Broking Value</string>
 
+    <string name="message_symbol_title_empty">Digite a Sigla da ação</string>
+    <string name="message_nome_empty">Digite o nome da ação</string>
+    <string name="message_value_paid_empty">Digite o valor pago na ação</string>
+    <string name="message_broking_empty">Digite o valor da corretagem</string>
+    <string name="message_profit_empty">Digite o percentual de lucro esperado</string>
+
     <string name="title_minhas_notas">Minhas Notas</string>
     <string name="procurar_anotacoes">Procurar anotações</string>
     <string name="note_title">Título Anotação</string>
     <string name="note_subtitle">Subtítulo  Anotação</string>
     <string name="type_note_here">Digite sua Anotação aqui</string>
-    <string name="message_note_title_empty">Digite o Título da Anotação</string>
-    <string name="message_note_subtitle_empty">Digite o Subtítulo  da Anotação</string>
-    <string name="message_note_empty">Digite a Anotação</string>
+
+
+
     <string name="message_success">Anotação Salva</string>
     <string name="message_update_success">Anotação Atualizada</string>
     <string name="message_delete_success">Anotação Deletada</string>

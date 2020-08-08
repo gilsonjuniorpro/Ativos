@@ -64,13 +64,16 @@ class StockViewModel(
     }
 
     fun getQuotations(items: List<Stock>) {
-        if (_state.value != null) return
+        //if (_state.value != null) return
 
         viewModelScope.launch {
             withContext(Dispatchers.IO){
                 items.forEach{
                     var res = QuotationController.listAllQuotations(it.symbol)
-                    if (res != null) {
+                    if (res != null && res.symbol != null) {
+                        res.paid = it.paid
+                        res.broking = it.broking
+                        res.profit = it.profit
                         setResult(res)
                     }
                 }

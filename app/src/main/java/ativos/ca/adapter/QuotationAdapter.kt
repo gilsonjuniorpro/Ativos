@@ -30,10 +30,10 @@ class QuotationAdapter(
         holder.tvName.text = items?.get(position)?.name
         holder.tvSymbol.text = items?.get(position)?.symbol
         holder.tvValueNow.text = items?.get(position)?.price.toString()
-        holder.tvPaidValue.text = items?.get(position)?.price.toString()
-        holder.tvBrokingValue.text = "R$10,00"
-        holder.tvProfitValue.text = "10%"
-        holder.tvValueFinalValue.text = "100,00"
+        holder.tvPaidValue.text = items?.get(position)?.paid.toString()
+        holder.tvBrokingValue.text = items?.get(position)?.broking.toString()
+        holder.tvProfitValue.text = items?.get(position)?.profit.toString()
+        holder.tvValueFinalValue.text = items?.get(position)?.paid.toString()
 
         holder.itemView.setOnClickListener{ onItemClick(items?.get(position)!!) }
     }

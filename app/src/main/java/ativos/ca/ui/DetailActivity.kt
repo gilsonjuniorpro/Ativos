@@ -70,16 +70,24 @@ class DetailActivity : AppCompatActivity() {
 
     private fun saveStock() {
         if (binding.etSymbolTitle.text.isEmpty()) {
-            Mark.showAlertError(this, getString(R.string.message_note_title_empty))
+            Mark.showAlertError(this, getString(R.string.message_symbol_title_empty))
             binding.etSymbolTitle.requestFocus()
             return
         } else if (binding.etStockName.text.isEmpty()) {
-            Mark.showAlertError(this, getString(R.string.message_note_subtitle_empty))
+            Mark.showAlertError(this, getString(R.string.message_nome_empty))
             binding.etStockName.requestFocus()
             return
         } else if (binding.etPaid.text.isEmpty()) {
-            Mark.showAlertError(this, getString(R.string.message_note_empty))
+            Mark.showAlertError(this, getString(R.string.message_value_paid_empty))
             binding.etPaid.requestFocus()
+            return
+        } else if (binding.etBroking.text.isEmpty()) {
+            Mark.showAlertError(this, getString(R.string.message_broking_empty))
+            binding.etBroking.requestFocus()
+            return
+        } else if (binding.etProfit.text.isEmpty()) {
+            Mark.showAlertError(this, getString(R.string.message_profit_empty))
+            binding.etProfit.requestFocus()
             return
         }
 
