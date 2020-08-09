@@ -20,7 +20,8 @@ data class Results(
     var paid: Double? = null,
     var broking: Double? = null,
     var profit: Int? = null,
-    var amount: Int? = null
+    var amount: Int? = null,
+    var id: Int? = null
 ): Parcelable{
 
 }

@@ -23,7 +23,7 @@ class StockViewModel(
     private val _quotations = MutableLiveData<List<Quotation>>()
     val quotations: LiveData<List<Quotation>> = _quotations
 
-    var list: MutableList<Results> = ArrayList()
+
 
     private val _state = MutableLiveData<State>()
     val state: LiveData<State>
@@ -65,7 +65,7 @@ class StockViewModel(
 
     fun getQuotations(items: List<Stock>) {
         //if (_state.value != null) return
-
+        var list: MutableList<Results> = ArrayList()
         viewModelScope.launch {
             withContext(Dispatchers.IO){
                 items.forEach{
@@ -75,9 +75,12 @@ class StockViewModel(
                         res.broking = it.broking
                         res.profit = it.profit
                         res.amount = it.amount
-                        setResult(res)
+                        res.id = it.id
+                        //setResult(res)
+                        list.add(res)
                     }else{
                         res = Results(
+                            id = it.id,
                             symbol = it.symbol,
                             name = it.name,
                             paid = it.paid,
@@ -85,15 +88,16 @@ class StockViewModel(
                             profit = it.profit,
                             amount = it.amount
                         )
-                        setResult(res)
+                        list.add(res)
+                        //setResult(res)
                     }
                 }
+                setResult(list)
             }
         }
     }
 
-    private suspend fun setResult(res: Results){
-        list.add(res)
+    private suspend fun setResult(list: MutableList<Results>) {
         withContext(Dispatchers.Main){
             if(list == null){
                 _state.value = State.Error(Exception("Error loading"), false)

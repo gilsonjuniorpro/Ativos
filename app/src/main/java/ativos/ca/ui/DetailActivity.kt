@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
@@ -22,13 +23,17 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.jarvis.ca.Mark
 import kotlinx.android.synthetic.main.layout_delete_stock.*
 import kotlinx.android.synthetic.main.layout_miscellaneous.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.util.ArrayList
 
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
     private var selectStockColor: String? = null
     private var dialogDeleteStock: AlertDialog? = null
-    private var alreadyAvailableStock: Stock? = null
     private var results: Results? = null
     private var isViewOrUpdate = false
 
@@ -50,20 +55,38 @@ class DetailActivity : AppCompatActivity() {
         binding.ivSave.setOnClickListener { saveStock() }
 
         selectStockColor = "#333333"
-        
+
+        populateAutoCompleteStocks()
         initMiscellaneous()
-        setColorDefault(1)
+        //setColorDefault(1)
         loadAvailableStock()
     }
 
+    fun populateAutoCompleteStocks() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val stocksAdapter = ArrayAdapter.createFromResource(
+                baseContext,
+                R.array.stocks_list,
+                android.R.layout.simple_list_item_1
+            )
+
+            withContext (Dispatchers.Main) {
+                binding.etSymbolTitle.setAdapter(stocksAdapter)
+            }
+        }
+    }
+
     private fun loadAvailableStock() {
-        alreadyAvailableStock = intent.getParcelableExtra("stock")
         results = intent.getParcelableExtra("results")
         isViewOrUpdate = intent.getBooleanExtra("isViewOrUpdate", false)
 
         if (results != null) {
             binding.etSymbolTitle.setText(results!!.symbol)
             binding.etStockName.setText(results!!.name)
+            binding.etPaid.setText(results!!.paid.toString())
+            binding.etBroking.setText(results!!.broking.toString())
+            binding.etProfit.setText(results!!.profit.toString())
+            binding.etAmount.setText(results!!.amount.toString())
             layoutDeleteStock.visibility = View.VISIBLE
         }
     }
@@ -123,7 +146,7 @@ class DetailActivity : AppCompatActivity() {
 
         if (isViewOrUpdate) {
             stock.apply {
-                id = alreadyAvailableStock!!.id
+                id = results!!.id
             }
             viewModel.update(stock)
         } else {
@@ -210,7 +233,7 @@ class DetailActivity : AppCompatActivity() {
             }
 
             view.findViewById<TextView>(R.id.btDeleteStock).setOnClickListener {
-                viewModel.delete(alreadyAvailableStock!!)
+                //viewModel.delete(alreadyAvailableStock!!)
                 val intent = Intent()
                 intent.putExtra("isStockDeleted", true)
                 setResult(RESULT_OK, intent)

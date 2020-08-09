@@ -19,7 +19,6 @@ import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
-    private var items: MutableList<Results> = ArrayList()
     private var layoutManager: LinearLayoutManager? = null
     private lateinit var binding: ActivityMainBinding
 
@@ -39,9 +38,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.fab.setOnClickListener { view ->
-            //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //.setAction("Action", null).show()
+        binding.fab.setOnClickListener {
             openCreateStock()
         }
 
@@ -87,7 +84,6 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, DetailActivity::class.java)
         intent.putExtra("isViewOrUpdate", true)
         intent.putExtra("results", results)
-        //intent.putExtra("stock", stock)
         startActivityForResult(
             intent,
             REQUEST_CODE_UPDATE_STOCK

@@ -49,7 +49,7 @@
                     app:layout_constraintTop_toTopOf="@+id/ivBack"
                     app:tint="@color/colorIcons" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
                     android:id="@+id/etSymbolTitle"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
@@ -59,7 +59,6 @@
                     android:background="@drawable/shape_background_fields"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_symbol_title"
-                    android:imeOptions="actionDone"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"
                     android:inputType="text"
@@ -67,9 +66,11 @@
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorTextHint"
                     android:textSize="16sp"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etStockName"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+                    app:layout_constraintTop_toBottomOf="@+id/ivBack"/>
 
                 <EditText
                     android:id="@+id/etStockName"
@@ -81,7 +82,8 @@
                     android:background="@drawable/shape_background_fields"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_name_title"
-                    android:imeOptions="actionDone"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etPaid"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"
                     android:inputType="textMultiLine"
@@ -104,7 +106,8 @@
                     android:digits="0123456789.,"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_paid_value"
-                    android:imeOptions="actionDone"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etBroking"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"
                     android:inputType="textMultiLine"
@@ -128,7 +131,8 @@
                     android:digits="0123456789.,"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_broking_value"
-                    android:imeOptions="actionDone"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etProfit"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"
                     android:inputType="textMultiLine"
@@ -151,7 +155,8 @@
                     android:digits="0123456789"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_expected_profit"
-                    android:imeOptions="actionDone"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etAmount"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"
                     android:inputType="textMultiLine"
