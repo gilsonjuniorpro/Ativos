@@ -23,7 +23,8 @@
     <string name="message_profit_empty">Digite o percentual de lucro esperado</string>
     <string name="message_amount_empty">Digite a quantidade de ações da compra</string>
     <string name="impossible_to_obtain_stock_data">Impossível obter informações da ação</string>
-
+    <string name="message_delete_error">Erro ao tentar excluir ação</string>
+    <string name="delete_stock">Deletar ação</string>
 
     <string name="title_minhas_notas">Minhas Notas</string>
     <string name="procurar_anotacoes">Procurar anotações</string>
@@ -33,20 +34,13 @@
 
 
 
-    <string name="message_success">Anotação Salva</string>
-    <string name="message_update_success">Anotação Atualizada</string>
-    <string name="message_delete_success">Anotação Deletada</string>
+    <string name="message_success">Ação Salva</string>
+    <string name="message_update_success">Ação Atualizada</string>
+    <string name="message_delete_success">Ação Deletada</string>
     <string name="message_permission_denied">Permissão negada</string>
-    <string name="message_error_loading_image">Erro ao carregar Imagem</string>
     <string name="loading">carregando...</string>
     <string name="error_loading">Erro ao carregar</string>
-    <string name="color_note">Cor da Anotação</string>
-    <string name="choose_a_color">Escolha \numa cor</string>
-    <string name="delete_note">Deletar Anotação</string>
-    <string name="add_link">Adicionar Link</string>
-    <string name="add_image">Adicionar Imagem</string>
-    <string name="add_url">Adicionar URL</string>
-    <string name="field_add_url">adicione a URL aqui</string>
+
     <string name="add">Adicionar</string>
     <string name="cancel">Cancelar</string>
     <string name="delete">Deletar</string>

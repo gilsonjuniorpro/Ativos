@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="8dp"
+    android:layout_margin="32dp"
     android:background="@drawable/shape_background_dialog">
 
     <ImageView
-        android:id="@+id/ivDeleteNote"
+        android:id="@+id/ivDeleteStock"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginStart="8dp"
@@ -22,21 +22,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvDeleteNote"
+        android:id="@+id/tvDeleteStock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/roboto_bold"
         android:includeFontPadding="false"
-        android:text="@string/delete_note"
+        android:text="@string/delete_stock"
         android:textColor="@color/colorWhite"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivDeleteNote"
-        app:layout_constraintStart_toEndOf="@+id/ivDeleteNote"
-        app:layout_constraintTop_toTopOf="@+id/ivDeleteNote" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivDeleteStock"
+        app:layout_constraintStart_toEndOf="@+id/ivDeleteStock"
+        app:layout_constraintTop_toTopOf="@+id/ivDeleteStock" />
 
     <TextView
-        android:id="@+id/tvMsgDeleteNote"
+        android:id="@+id/tvMsgDeleteStock"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivDeleteNote" />
+        app:layout_constraintTop_toBottomOf="@+id/ivDeleteStock" />
 
     <TextView
         android:id="@+id/btDeleteStock"
@@ -68,7 +68,7 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMsgDeleteNote" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMsgDeleteStock" />
 
     <TextView
         android:id="@+id/btCancelDelete"
@@ -85,6 +85,6 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMsgDeleteNote" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMsgDeleteStock" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

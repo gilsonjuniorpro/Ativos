@@ -1,5 +1,7 @@
 package ativos.ca.util
 
+import ativos.ca.model.Results
+import ativos.ca.model.Stock
 import java.text.DecimalFormat
 
 class Utils {
@@ -37,6 +39,30 @@ class Utils {
             }else{
                  "$number%"
             }
+        }
+
+        fun stockToResults(stock: Stock): Results{
+            return Results(
+                    id = stock.id,
+                    symbol = stock.symbol,
+                    name = stock.name,
+                    paid = stock.paid,
+                    broking = stock.broking,
+                    profit = stock.profit,
+                    amount = stock.amount
+                )
+        }
+
+        fun resultsToStock(results: Results): Stock{
+            return Stock(
+                    id = results.id,
+                    symbol = results.symbol,
+                    name = results.name,
+                    paid = results.paid,
+                    broking = results.broking,
+                    profit = results.profit,
+                    amount = results.amount
+                )
         }
     }
 }
