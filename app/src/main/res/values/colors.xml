@@ -7,6 +7,9 @@
     <color name="colorOrange">#FF9800</color>
     <color name="colorFabOrange">#99FF9800</color>
 
+    <color name="colorUp">#26FF00</color>
+    <color name="colorDown">#E1030A</color>
+
     <color name="colorBackgroundPrimary">#292929</color>
     <color name="colorBackgroundPrimaryDark">#292929</color>
     <color name="colorWhite">#FFFFFF</color>

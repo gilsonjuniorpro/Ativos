@@ -29,9 +29,9 @@
                     android:layout_marginTop="16dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_back"
-                    app:tint="@color/colorIcons"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/colorIcons" />
 
                 <ImageView
                     android:id="@+id/ivSave"
@@ -56,17 +56,17 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_background_fields"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_symbol_title"
                     android:imeOptions="actionDone"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"
                     android:inputType="text"
+                    android:padding="8dp"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorTextHint"
                     android:textSize="16sp"
-                    android:background="@drawable/shape_background_fields"
-                    android:padding="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ivBack" />
@@ -99,8 +99,9 @@
                     android:layout_height="35dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:background="@drawable/shape_background_fields"
+                    android:digits="0123456789.,"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_paid_value"
                     android:imeOptions="actionDone"
@@ -111,7 +112,8 @@
                     android:textColor="@color/colorTextSubtitle"
                     android:textColorHint="@color/colorTextHint"
                     android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/etBroking"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etStockName" />
 
@@ -119,10 +121,11 @@
                     android:id="@+id/etBroking"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/shape_background_fields"
+                    android:digits="0123456789.,"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_broking_value"
                     android:imeOptions="actionDone"
@@ -134,18 +137,18 @@
                     android:textColorHint="@color/colorTextHint"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etPaid" />
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/etPaid"
+                    app:layout_constraintTop_toBottomOf="@+id/etStockName" />
 
                 <EditText
                     android:id="@+id/etProfit"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
                     android:background="@drawable/shape_background_fields"
+                    android:digits="0123456789"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/stock_expected_profit"
                     android:imeOptions="actionDone"
@@ -156,10 +159,37 @@
                     android:textColor="@color/colorTextSubtitle"
                     android:textColorHint="@color/colorTextHint"
                     android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/etAmount"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/etAmount"
+                    app:layout_constraintTop_toTopOf="@+id/etAmount" />
+
+                <EditText
+                    android:id="@+id/etAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/shape_background_fields"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="@string/stock_amount"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textMultiLine"
+                    android:padding="8dp"
+                    android:textColor="@color/colorTextSubtitle"
+                    android:textColorHint="@color/colorTextHint"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/etProfit"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etBroking" />
+                    app:layout_constraintTop_toBottomOf="@+id/etPaid" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

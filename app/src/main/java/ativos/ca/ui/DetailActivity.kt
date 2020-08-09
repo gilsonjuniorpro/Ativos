@@ -89,15 +89,36 @@ class DetailActivity : AppCompatActivity() {
             Mark.showAlertError(this, getString(R.string.message_profit_empty))
             binding.etProfit.requestFocus()
             return
+        } else if (binding.etAmount.text.isEmpty()) {
+            Mark.showAlertError(this, getString(R.string.message_profit_empty))
+            binding.etAmount.requestFocus()
+            return
         }
 
         val stock = Stock()
         stock.apply {
             symbol = binding.etSymbolTitle.text.toString()
             name = binding.etStockName.text.toString()
-            paid = binding.etPaid.text.toString()
-            broking = binding.etBroking.text.toString()
-            profit = binding.etProfit.text.toString()
+            paid = if(!binding.etPaid.text.isNullOrBlank()){
+                binding.etPaid.text.toString().toDouble()
+            }else{
+                0.0
+            }
+            broking = if(!binding.etBroking.text.isNullOrBlank()){
+                binding.etBroking.text.toString().toDouble()
+            }else{
+                0.0
+            }
+            profit = if(!binding.etProfit.text.isNullOrBlank()){
+                binding.etProfit.text.toString().toInt()
+            }else{
+                0
+            }
+            amount = if(!binding.etAmount.text.isNullOrBlank()){
+                binding.etAmount.text.toString().toInt()
+            }else{
+                0
+            }
         }
 
         if (isViewOrUpdate) {

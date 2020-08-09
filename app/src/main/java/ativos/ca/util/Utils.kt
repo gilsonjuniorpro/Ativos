@@ -1,5 +1,7 @@
 package ativos.ca.util
 
+import java.text.DecimalFormat
+
 class Utils {
     companion object {
         fun getColorIndicator(color: String?): Int{
@@ -17,6 +19,23 @@ class Utils {
                 text.substring(0, 80) + "..."
             }else{
                 text
+            }
+        }
+
+        fun formatNumberCurrency(number: String?) : String{
+            var formatter = DecimalFormat("###,###,##0.00")
+            return if(number == null){
+                "R$ 0.00"
+            }else{
+                "R$ " + formatter.format(number.toDouble())
+            }
+        }
+
+        fun formatNumberPercent(number: String?) : String{
+            return if(number == null){
+                "0%"
+            }else{
+                 "$number%"
             }
         }
     }

@@ -7,19 +7,20 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Results(
     @SerializedName("change_percent")
-    val changePercent: Double?,
-    val currency: String?,
+    val changePercent: Double? = null,
+    val currency: String? = null,
     @SerializedName("market_cap")
-    val marketCap: Double?,
-    val name: String?,
-    val price: Double?,
-    val region: String?,
-    val symbol: String?,
+    val marketCap: Double? = null,
+    val name: String? = null,
+    val price: Double? = null,
+    val region: String? = null,
+    val symbol: String? = null,
     @SerializedName("updated_at")
-    val updatedAt: String?,
-    var paid: String?,
-    var broking: String?,
-    var profit: String?
+    val updatedAt: String? = null,
+    var paid: Double? = null,
+    var broking: Double? = null,
+    var profit: Int? = null,
+    var amount: Int? = null
 ): Parcelable{
 
 }

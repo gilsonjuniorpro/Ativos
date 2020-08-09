@@ -12,9 +12,10 @@ data class Stock(
     var id: Int? = null,
     var symbol: String? = null,
     var name: String? = null,
-    var paid: String? = null,
-    var broking: String? = null,
-    var profit: String? = null
+    var paid: Double? = null,
+    var broking: Double? = null,
+    var profit: Int? = null,
+    var amount: Int? = null
 ) : Parcelable {
 
 }

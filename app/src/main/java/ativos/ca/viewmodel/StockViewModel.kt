@@ -74,6 +74,17 @@ class StockViewModel(
                         res.paid = it.paid
                         res.broking = it.broking
                         res.profit = it.profit
+                        res.amount = it.amount
+                        setResult(res)
+                    }else{
+                        res = Results(
+                            symbol = it.symbol,
+                            name = it.name,
+                            paid = it.paid,
+                            broking = it.broking,
+                            profit = it.profit,
+                            amount = it.amount
+                        )
                         setResult(res)
                     }
                 }

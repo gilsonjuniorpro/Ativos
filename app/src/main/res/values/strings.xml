@@ -1,22 +1,29 @@
 <resources>
     <string name="app_name">Ativos</string>
-    <string name="label_name">name</string>
-    <string name="label_symbol">symbol</string>
-    <string name="label_my_stocks">My Stocks</string>
-    <string name="label_value_now">value now</string>
+    <string name="label_name">Nome ação</string>
+    <string name="label_symbol">Sigla ação</string>
+    <string name="label_my_stocks">Minha Carteira</string>
+    <string name="label_value_now">valor atual</string>
 
 
-    <string name="stock_symbol_title">Stock Symbol</string>
-    <string name="stock_name_title">Stock Name</string>
-    <string name="stock_paid_value">Stock Paid Value</string>
-    <string name="stock_expected_profit">Stock Expected Profit</string>
-    <string name="stock_broking_value">Stock Broking Value</string>
+    <string name="stock_symbol_title">Sigla ação</string>
+    <string name="stock_name_title">Nome ação</string>
+    <string name="stock_paid_value">Valor Pago</string>
+    <string name="stock_expected_profit">Lucro esperado</string>
+    <string name="stock_amount">Quantidade ações</string>
+    <string name="stock_broking_value">Valor corretagem</string>
+
+    <string name="stock_expected_profit_label">Lucro esperado</string>
+    <string name="stock_final_value_label">valor de venda</string>
 
     <string name="message_symbol_title_empty">Digite a Sigla da ação</string>
     <string name="message_nome_empty">Digite o nome da ação</string>
     <string name="message_value_paid_empty">Digite o valor pago na ação</string>
     <string name="message_broking_empty">Digite o valor da corretagem</string>
     <string name="message_profit_empty">Digite o percentual de lucro esperado</string>
+    <string name="message_amount_empty">Digite a quantidade de ações da compra</string>
+    <string name="impossible_to_obtain_stock_data">Impossível obter informações da ação</string>
+
 
     <string name="title_minhas_notas">Minhas Notas</string>
     <string name="procurar_anotacoes">Procurar anotações</string>
